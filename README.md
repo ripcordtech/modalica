@@ -38,7 +38,7 @@ Exemple:
         Ce lien ouvre la boite modal liée au contenu "#contenu1"
     </a>
 
--------
+--
 
 ###JS
 La partie javascript est très simple, il suffit d'appeler le plugin comme ceci :
