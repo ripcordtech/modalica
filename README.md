@@ -7,6 +7,9 @@ Modalica est un plugin jQuery de boite modale qui se veut le plus simple possibl
 
 Installation
 ------------
+
+
+###Prérequis
 L'installation du plugin est très simple : il suffit d'appeler les deux fichiers suivants dans votre page : `modalica.js` ainsi que `modalica.js`
     
     <!-- CSS -->
@@ -26,9 +29,6 @@ Pour créer un block de contenu à afficher dans le modal, il suffit d'ajouter v
       </p>
     </div>
     
---
-
-
 
 *NB:* L'identifiant de la div doit correspondre au `href` du lien qui a pour but d'appeler la boite modal.
 
@@ -38,3 +38,11 @@ Exemple:
         Ce lien ouvre la boite modal liée au contenu "#contenu1"
     </a>
 
+-------
+
+###JS
+La partie javascript est très simple, il suffit d'appeler le plugin comme ceci :
+
+    $(document).ready(function() {
+        $('.modalica').modalica(); 
+    });
