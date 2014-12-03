@@ -3,11 +3,11 @@ Modalica
 
 Modalica est un plugin jQuery de boite modale qui se veut le plus simple possible.
 
-##Sommaire
+
+
 
 Installation
 ------------
-
 
 ###Prérequis
 L'installation du plugin est très simple : il suffit d'appeler les deux fichiers suivants dans votre page : `modalica.js` ainsi que `modalica.js`
@@ -46,3 +46,16 @@ La partie javascript est très simple, il suffit d'appeler le plugin comme ceci 
     $(document).ready(function() {
         $('.modalica').modalica(); 
     });
+
+
+
+Customisation
+--------------
+Les feuilles de style de ce plugin ont été écrite à l'aide de SASS et Compass, de ce fait, si vous souhaitez modifier l'apparence globale de la boite, il vous suffit de modifier les variables à votre disposition dans le fichier `_modalica-settings.scss` :
+
+    $modalica-max-width:960px;
+    $modalica-background:#253d5b;
+    $modalica-text-color:#a8bbdf;
+    $close-btn-background:#f06d55;
+    $transition-background:all ease .2s;
+    $transition-content:all ease .3s;
