@@ -1,0 +1,98 @@
+@import "compass";
+
+@import "modalica_settings";
+
+
+body, html { 
+  -ms-overflow-style: none !important; 
+}
+.modalica-modal {
+	@include box-sizing(border-box);
+	* {@include box-sizing(border-box);}
+
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	z-index: 999;
+	position: absolute;
+	overflow: auto;
+	-webkit-overflow-scrolling: touch;
+	@include transform(translateX(-100%));
+	@include transition($transition-content);
+
+	&.active { @include transform(translateX(0%)); }
+
+	.modalica--wrapper {
+		max-width: $modalica-max-width;
+		margin: 0 auto;
+		margin-top: 2em;
+		padding: 1.5em;
+		position: relative;
+		font-family: Arial, Helvetica, sans-serif;
+		color: $modalica-text-color !important;
+	}
+
+	.modalica--close {
+		width: 26px;
+		cursor: pointer;
+		height: 26px;
+		background-color: $close-btn-background;
+		text-align: center;
+		display: inline-block;
+		font-size: 12px;
+		line-height: 26px;
+		font-family: Arial, Helvetica, sans-serif;
+		color: #FFF;
+		position: relative;
+		border-radius: 50px;
+		margin-bottom: 2em;
+
+		&:after {
+			opacity: 0;
+			content: "Fermer";
+			position: absolute;
+			background-color: lighten($close-btn-background, 6);
+			left: 0;
+			padding-left: 34px;
+			padding-right: 14px;
+			font-style: italic;
+			z-index: -1;
+			top: 0;
+			height: 26px;
+			border-radius: 50px;
+			@include transition(all ease .3s);
+		}
+
+		&:hover:after { opacity: 1; }
+	}
+ 
+	.modalica--content {
+		display: block !important;
+		overflow: auto;
+		-webkit-overflow-scrolling: touch;
+
+		img, embed { max-width: 100%; height: auto; }
+	}
+}
+.modalica--content {display: none;}
+
+
+
+body:after {
+	content: "";
+	background-color: $modalica-background;
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	z-index: 1;
+	@include transform(translateY(-100%));
+	@include transition($transition-background);
+}
+body.modalica-active {
+	&:after {
+		@include transform(translateY(0%));
+	}
+}
