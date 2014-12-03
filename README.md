@@ -26,7 +26,7 @@ Pour créer un block de contenu à afficher dans le modal, il suffit d'ajouter v
       </p>
     </div>
     
-
+--
 
 
 
@@ -34,4 +34,7 @@ Pour créer un block de contenu à afficher dans le modal, il suffit d'ajouter v
 
 Exemple:
 
-    <a href="#contenu1" class="modalica">Ce lien ouvre la boite modal liée au contenu "#contenu1"</a>
+    <a href="#contenu1" class="modalica">
+        Ce lien ouvre la boite modal liée au contenu "#contenu1"
+    </a>
+
