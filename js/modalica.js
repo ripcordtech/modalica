@@ -4,7 +4,9 @@ $(document).ready(function() {
 		var body = $('body'); 
 
 		modalica.init = function() {
-			body.append('<div class="modalica-modal"><div class="modalica--wrapper"><div class="modalica--close"><span>x</span></div><div class="modalica--content"></div></div></div>');
+			if ($('.modalica-modal').length == 0) { //Check that body.append hasn't been called already for a previous init
+				body.append('<div class="modalica-modal"><div class="modalica--wrapper"><div class="modalica--close"><span>x</span></div><div class="modalica--content"></div></div></div>');
+			}
 		};
 		modalica.init();
 
